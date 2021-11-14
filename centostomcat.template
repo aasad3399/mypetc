@@ -1,0 +1,65 @@
+{
+    "_meta": {
+        "schema_version": "v1beta0-7.9.0"
+    },
+    "farm": {
+        "name": "DemoServer",
+        "description": "",
+        "project": {
+            "id": "8208a27d-4856-4a36-8692-b889bf1db8c5"
+        },
+        "timezone": "Asia\/Kolkata",
+        "launchOrder": "simultaneous",
+        "variables": []
+    },
+    "roles": [
+        {
+            "alias": "tomcat-centos7",
+            "role": {
+                "name": "tomcat-centos7"
+            },
+            "cloudPlatform": "ec2",
+            "cloudLocation": "us-east-1",
+            "instanceType": {
+                "id": "t2.nano"
+            },
+            "launchIndex": 0,
+            "advancedConfiguration": {
+                "disableAgentIptablesManagement": false,
+                "disableAgentNtpManagement": false,
+                "rebootAfterHostInit": false
+            },
+            "networking": {
+                "networks": [
+                    {
+                        "id": "vpc-912c4bf6"
+                    }
+                ],
+                "subnets": [
+                    {
+                        "id": "subnet-93e2f1ae"
+                    }
+                ]
+            },
+            "cloudFeatures": {
+                "type": "AwsCloudFeatures",
+                "ebsOptimized": false
+            },
+            "security": {
+                "securityGroups": [
+                    {
+                        "name": "default"
+                    },
+                    {
+                        "name": "scalr.410c49e8.ip-pool"
+                    }
+                ]
+            },
+            "variables": [],
+            "orchestration": {
+                "rules": []
+            },
+            "storage": []
+        }
+    ]
+}
